@@ -1,0 +1,54 @@
+buildscript {
+    ext.kotlin_version = '1.6.10'
+    repositories {
+        google()
+        mavenCentral()
+//external
+        //  maven {
+        //     url 'https://android-sdk.is.com/'
+        // }
+        // maven { url 'https://jitpack.io' }
+
+        // maven {
+        //     url "https://s3.amazonaws.com/smaato-sdk-releases/"
+        // }
+
+        // jcenter()
+//
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+
+//external
+    //      jcenter() // Warning: this repository is going to shut down soon
+    //     maven {
+    //         url 'https://android-sdk.is.com/'
+    //     }
+    //     maven { url 'https://jitpack.io' }
+    //     maven {
+    //         url "https://s3.amazonaws.com/smaato-sdk-releases/"
+    //    }
+//
+    }
+}
+
+rootProject.buildDir = '../build'
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(':app')
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
