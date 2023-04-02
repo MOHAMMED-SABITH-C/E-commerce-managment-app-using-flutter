@@ -9,8 +9,6 @@ import 'package:flutter_application_2/dropdown.dart';
 import 'package:flutter_application_2/list.dart';
 import 'package:flutter_application_2/seconddb/db_functions2.dart';
 
-// import 'seconddb/db_functions2.dart';
-//import 'package:flutter_application_2/list.dart';
 
 class SearchSortU extends StatelessWidget {
    SearchSortU({super.key,required this.num});
@@ -84,18 +82,10 @@ late String types = 'Electronic Devices1S' ;
               SizedBox(height: 10,),
                                // Expanded(child: select(),),
                 
-              // TextField(
-              //   controller: _search2,
-              //   decoration: InputDecoration(
-              //     label: Text('catogory')
-              //   ),
-              // ),
-              // if(num==1)
+            
               DropdownButtonFormField(
                 items:num==0? _lists.map((e){
-                // if(num==1){
-
-                // }
+               
                   return DropdownMenuItem(
                     value: e,
                     child: Text(e),
@@ -107,7 +97,6 @@ late String types = 'Electronic Devices1S' ;
                     child: Text(e),
                   );
                 },).toList(),
-                // }),
                 hint: Text('Select catogory')
                 ,onChanged: (String ? value){
                   type =value!;
@@ -131,10 +120,8 @@ late String types = 'Electronic Devices1S' ;
                   SearchDbA(type,text);
                   }
                   else if(num==1){
-                    //  text= _search.text.trim();
                     SearchDbA2(type,text);
                   }else{
-                    // text= _search.text.trim();
                   SearchDbA3(type,text);
                   }
               },
@@ -142,10 +129,6 @@ late String types = 'Electronic Devices1S' ;
                 label: Text('Search'))
               ,
 
-           //    Expanded(child: listcreation(),)
-                  // SizedBox(height: 30,),
-                  Divider(thickness: 15,color: Color.fromARGB(206, 60, 59, 59),),
-                  Expanded(child: listcreation0(type: _item[num]),)
             ],
           ),
         ),
@@ -157,8 +140,6 @@ late String types = 'Electronic Devices1S' ;
             },
              child: Icon(Icons.sort),
              
-          // hoverColor:Colors.red,
-            //mouseCursor:,
             )
     );
   }
@@ -199,9 +180,7 @@ late String types = 'Electronic Devices1S' ;
                       else if(num==2){
                         sort3('DESC','price');
                       }
-                  //  // text = 'DESC';
                      }
-                  //else 
                   if(value == 'Ascending')
                    {
                     if(num==0){
@@ -224,56 +203,5 @@ late String types = 'Electronic Devices1S' ;
       }
       );
   }
-  // Future<Widget> select()async{
-  //   if(num==1){
-
-  //           return  DropdownButtonFormField(
-  //               items: _lists.map((e){
-  //                 return DropdownMenuItem(
-  //                   value: e,
-  //                   child: Text(e),
-  //                 );
-  //               },).toList(),
-  //               hint: Text('Select catogory')
-  //               ,onChanged: (String ? value){
-  //                 type =value!;
-  //                 SearchDb('type',type);
-  //                 },
-                  
-  //                 );
-  //   }
-  //   else if(num==1){
-  //     if(num==1)
-  //          return  DropdownButtonFormField(
-  //                 items: _lists.map((e){
-  //                   return DropdownMenuItem(
-  //                     value: e,
-  //                     child: Text(e),
-  //                   );
-  //                 },).toList(),
-  //                 hint: Text('Select catogory')
-  //                 ,onChanged: (String ? value){
-  //                   type =value!;
-  //                   SearchDb2('type',type);
-  //                   },
-                    
-  //                   );
-  //   }
-  //  // else {//if(num==2){
-  //    return  DropdownButtonFormField(
-  //               items: _lists.map((e){
-  //                 return DropdownMenuItem(
-  //                   value: e,
-  //                   child: Text(e),
-  //                 );
-  //               },).toList(),
-  //               hint: Text('Select catogory')
-  //               ,onChanged: (String ? value){
-  //                 type =value!;
-  //                 SearchDb3('type',type);
-  //                 },
-                  
-  //                 );
-  //   //}
-  // }
+  
 }
