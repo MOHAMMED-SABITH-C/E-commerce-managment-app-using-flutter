@@ -1,9 +1,5 @@
 import 'package:flutter_application_2/model/data_model.dart';
-// import 'package:sqflite/sqflite.dart';
 
-// Future <List<StudentModel>> Display() async{
-//   final Database db = await database;
-//}
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -31,13 +27,9 @@ late String table;
 
   @override
   Widget build(BuildContext context) {
-    //getAllStudents3();
     return
       Container(
-     //Scaffold(
-     // appBar: AppBar(title: Text('MOHAMMED SABITH C')),
-    //  body: SafeArea(
-     // body: 
+    
         child: 
         Center(
             child: Padding(
@@ -79,15 +71,7 @@ late String table;
                       );
                     }));
                   }
-                  // else if( values == 'Shirts'){
-                  //   print(values);
-                  //   Navigator.of(context)
-                  //       .pushReplacement(MaterialPageRoute(builder: (context) {
-                  //     return BottomNavigation(
-                  //       table: '$values',
-                  //     );
-                  //   }));
-                  // }
+                
                   else if( values == 'USER'){
                     print(values);
                     Navigator.of(context)
@@ -108,136 +92,11 @@ late String table;
               
           ]),
         )
-            //],
             ),
-      //),
     );
   }
 }
 
-// import 'package:flutter/material.dart';
-// import 'package:flutter/src/widgets/container.dart';
-// import 'package:flutter/src/widgets/framework.dart';
 
-// import '../model/data_model.dart';
-
-// class SelectTable2 extends StatelessWidget {
-//    SelectTable2({super.key});
-
-//   int index =0;
-
-
-
-
-//   @override
-//   Widget build(BuildContext context,) {
-//     return Scaffold(
-//       body: Column(
-//         children: [
-//           Padding(padding: EdgeInsets.all(10),
-//           child:getDynamicTable(),)
-//         ]),
-//        // ElevatedButton(child: Text('hi'),onPressed: (){},)
-//     );
-    
-//   }
-
-//   Table getDynamicTable() {
-//     List<TableRow>rows = [];
-//   List<StudentModel> objects ;
-//   if(objects!=null){
-//     for(int i=0;i<this.objects.length,++i){
-//       final data = objects.
-//     rows.add(TableRow(children: [
-//       Text(''+objects.name),
-//       Text(''+objects.price),
-//       Text('id566'),
-      
-//     ]));
-//   }
-// }
-
-// // import 'package:flutter/material.dart';
-// // import 'main.dart';
-// // import 'package:flutter_session_manager/flutter_session_manager.dart';
-// // class newPage extends StatelessWidget {
-// // const newPage({Key? key}) : super(key: key);
-// // @override
-// // Widget build(BuildContext context) {
-// // return MaterialApp(
-// // title: 'Flutter Demo',
-// // theme: ThemeData(
-// // primarySwatch: Colors.green,
-// // ),
-// // home: const MyHomePage(title: 'Flutter Demo Page 2'),
-// // );
-// // }
-// // }
-// // class MyHomePage extends StatefulWidget {
-// // const MyHomePage({Key? key, required this.title}) : super(key: key);
-// // final String title;
-// // @override
-// // State<MyHomePage> createState() => _MyHomePageState();
-// // }
-// // class _MyHomePageState extends State<MyHomePage> {
-// // int _counter = 0;
-// // var sessionManager = SessionManager();
-// // @override
-// // void initState() {
-// // super.initState();
-// // setSessionValue();
-// // }
-// // setSessionValue()
-// // async {
-// // dynamic count = await SessionManager().get("count");
-// // if(count!=null)
-// // {
-// // _counter=int.parse('$count');
-// // _counter=_counter-1;
-// // _incrementCounter();
-// // }
-// // }
-// // Future<void> _incrementCounter() async {
-// // setState(() {
-// // _counter++;
-// // });
-// // await sessionManager.set("count", _counter);
-// // }
-// // @override
-// // Widget build(BuildContext context) {
-// // return Scaffold(
-// // appBar: AppBar(
-// // title: Text(widget.title),
-// // ),
-// // body: Center(
-// // child: Column(
-// // children: <Widget>[
-// // const Text(
-// // 'Second Page Count :',
-// // ),
-// // Text(
-// // '$_counter',
-// // style: Theme.of(context).textTheme.headline4,
-// // ),
-// // RaisedButton(
-// // child: new Text('Jump To Previous Page'),
-// // onPressed: () {
-// // Navigator.push(
-// // context,
-// // MaterialPageRoute(builder: (context) => MyApp()),
-// // );
-// // },
-// // )
-// // ],
-// // ),
-// // ),
-// // floatingActionButton: FloatingActionButton(
-// // onPressed: _incrementCounter,
-// // tooltip: 'Increment',
-// // child: const Icon(Icons.add),
-// // ), 
-// // );
-// // }
-// // }
 
 
