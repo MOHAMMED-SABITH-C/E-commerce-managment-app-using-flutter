@@ -25,29 +25,7 @@ class UserBill extends StatelessWidget {
                               final data = studentList[index];
                                   print(data.name+'hiBill');
                                   return Expanded(child: Column(),);
-                                  //PrintBill(Uname:data.name,phone: data.phone,email: data.email,objName:widget.name,price: widget.price,count: widget.count,);
-                            //  return ListTile(
-                            //     title: Text(data.name),
-                            //     subtitle: Text(data.phone),
-                            //     leading: CircleAvatar(radius: 30),
-                            //     hoverColor: Colors.red,
-                            //     onTap: () {
-                            //       // Navigator.of(context).push(
-                            //       //   MaterialPageRoute(builder: (context){
-                            //       //     return Buyobj(name:data.name,table: 'Electronic Devices',);
-                            //       //   })
-                            //       // );
-                            // //      listcreation0(type: 'Electronic Devices',);
-                            //     },
-                            //     trailing: IconButton(onPressed:(){
-                                  
-                            //       if(data.name!=null)
-                            //      //   deleteStudent(data.name);
-                            //      print(data.name);
-                            //     }, 
-                            //     icon:Icon(Icons.delete)
-                            //     ),
-                            //   );
+                                
                             },
                             separatorBuilder: (context, index) {
                               return const Divider();
